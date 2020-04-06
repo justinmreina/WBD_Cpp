@@ -1,0 +1,84 @@
+WorkByDay Activity Record
+Version: 1.0
+Author: Justin Reina
+Published: 03/22/2020
+
+(09:35:49) Log file was created
+(09:35:49) dir: C:\Documents\MyWorkspaces\Eclipse\CDT\WBD_App\data\TestDirs
+(09:35:49) Beginning search query for WorkByDay -
+
+
+//******************** WBD DIR CHECK ********************
+
+
+
+//******************** NODES ********************
+
+(09:35:49) Hello 6553316: StringOne
+(09:35:49) next is: 12132172
+(09:35:49) Hello 6553316: StringTwo
+(09:35:49) next is: 12130084
+(09:35:49) Hello 6553316: StringThree
+(09:35:49) next is 0x0000 and passing
+(09:35:49) WBDUpate complete(2/100).  Elapsed time: 4.314000s
+
+
+//***********************************************************************************************//
+WorkByDay Activity Record
+Version: 1.0
+Author: Justin Reina
+Published: 03/22/2020
+
+(09:36:58) Log file was created
+(09:36:58) dir: C:\Documents\MyWorkspaces\Eclipse\CDT\WBD_App\data\TestDirs
+(09:36:58) Beginning search query for WorkByDay -
+
+
+//******************** WBD DIR CHECK ********************
+
+(09:36:58) Check: .
+(09:36:58) Check: ..
+(09:36:58) Check: dev name
+(09:36:58) Check: doc.docx
+(09:36:58) Check: file.txt
+(09:36:58) Check: TestA
+(09:36:58) Check: TestB
+(09:36:58) Check: TestC
+(09:36:58) Check: TestE
+
+
+//******************** NODES ********************
+
+(09:36:58) Hello 6553316: StringOne
+(09:36:58) next is: 7937644
+(09:36:58) Hello 6553316: StringTwo
+(09:36:58) next is: 7937668
+(09:36:58) Hello 6553316: StringThree
+(09:36:58) next is 0x0000 and passing
+(09:36:58) WBDUpate complete(2/100).  Elapsed time: 3.001000s
+
+
+//***********************************************************************************************//
+WorkByDay Activity Record
+Version: 1.0
+Author: Justin Reina
+Published: 03/25/2020
+
+(11:04:18) Log file was created
+(11:04:18) dir: C:\Documents\MyWorkspaces\Eclipse\CDT\WBD_App\data\TestDirs
+(11:04:18) Beginning search query for WorkByDay -
+
+
+//******************** WBD DIR CHECK ********************
+
+
+
+//******************** NODES ********************
+
+(11:04:18) Hello 6553348: StringOne
+(11:04:18) next is: 12523140
+(11:04:18) Hello 6553348: StringTwo
+(11:04:18) next is: 12523164
+(11:04:18) Hello 6553348: StringThree
+(11:04:18) next is: 12523188
+(11:04:18) WBDUpate complete(2/100).  Elapsed time: 3.001000s
