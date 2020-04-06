@@ -37,23 +37,26 @@
  *			files are the explicit property of Justin Reina. Do not distribute. Do not copy.
  */
 /************************************************************************************************************************************/
+#include <iostream>
+using namespace std;
+
 #include "globals.h"
 
 
-////Dev Variables
-//char *strOne   = "StringOne";
-//char *strTwo   = "StringTwo";
-//char *strThree = "StringThree";
-//char *strFour = "StringFour";
+//Dev Variables
+char const *strOne   = "StringOne";
+char const *strTwo   = "StringTwo";
+char const *strThree = "StringThree";
+char const *strFour = "StringFour";
 
 //Local Routines
 void sys_init(void);
 
-////Temp Locals
-//long timeVals[3];															/* dates found for time measurement						*/
-//Node *searchDirs;															/* wbd dirs found										*/
-//char *rootDir;
-//Node *firstNode, *secondNode, *thirdNode, *fourthNode;
+//Temp Locals
+long timeVals[3];															/* dates found for time measurement						*/
+Node *searchDirs;															/* wbd dirs found										*/
+char *rootDir;
+Node *firstNode, *secondNode, *thirdNode, *fourthNode;
 
 
 /************************************************************************************************************************************/
