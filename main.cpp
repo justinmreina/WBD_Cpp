@@ -13,8 +13,10 @@
  * 		• Content located in administrator's locations (e.g. 'C:\Program Files') must be handled in supervisor mode
  *
  *	@section 	Opens
- *		//..//...
- *		•
+ *		• Uncomment out source for cpp conversion
+ *		• re-integrate '!!!' content
+ *		• correct compile warnings
+ *		//..
  *		• convert to c++ (for extended routines)
  *		• void wbd_storeSearchLen()
  *		• wbdPath_getSubDirs()
@@ -75,21 +77,20 @@ int main(void) {
 	sys_init();
 
 	cout << "Hello World!!" << endl; 										/* prints !!!Hello World!!!								*/
-	return 0;
 
-//	//******************************************************************************************************************************//
-//	//															SEARCH																//
-//	//******************************************************************************************************************************//
-//	log_info("Beginning search query for WorkByDay -");
-//
+	//******************************************************************************************************************************//
+	//															SEARCH																//
+	//******************************************************************************************************************************//
+	log_info("Beginning search query for WorkByDay -");
+
 //	//Find all WBD in target
 //	log_insertSection("WBD DIR CHECK");
 //	wbdPath_getAllWbdDirs(searchDirs, rootDir);								/* store wbd directories found							*/
 //
 //	//Update Dir Counts
 //	wbd_storeSearchLen(searchDirs);											/* @note 	this might not be needed					*/
-//
-//
+
+
 //	//******************************************************************************************************************************//
 //	//														   CLEAN EMPTIES														//
 //	//******************************************************************************************************************************//

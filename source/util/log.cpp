@@ -18,7 +18,7 @@
 
 //Globals
 FILE *logFile;
-time_t timer;
+//!!!time_t timer;
 
 
 /************************************************************************************************************************************/
@@ -58,7 +58,7 @@ void log_init(void) {
 
 	//Init
 	logFile = fopen(LOGFILENAME, "a+");										/* create log file										*/
-	timer = time(NULL);
+//!!!	timer = time(NULL);
 
 	//Load Log
 	log_insertHeader();
@@ -126,10 +126,10 @@ void log_info(char *str) {
 	char buf2[200];
 
 	//Timestamp
-    tm_info = localtime(&timer);
+ //!!!   tm_info = localtime(&timer);
 
 	//Gen
-    tm_info = localtime(&timer);
+//!!!    tm_info = localtime(&timer);
     sprintf(buf2, "(%02d:%02d:%d) %s", (tm_info->tm_hour), tm_info->tm_min, (tm_info->tm_sec), str);
 
 	//Print
@@ -179,7 +179,7 @@ void log_insertHeader(void) {
 
 
 	//Add date & EOS
-    tm_info = localtime(&timer);
+//!!!    tm_info = localtime(&timer);
 //@todo 	is &[0] needed?
     sprintf(&buf2[0], "%02d/%02d/%d\n", (tm_info->tm_mon+1), tm_info->tm_mday, (1900+tm_info->tm_year));
     log_write(buf2);
@@ -209,7 +209,7 @@ void log_insertSection(char *name) {
 
 	//Init
 	len = 3 + 2 + strlen(SECTION_BUF) + strlen(name) + strlen(SECTION_BUF) + 2;
-	buf = malloc(len);
+//!!!	buf = malloc(len);
 
 	sprintf(buf, "\n\n//%s %s %s\n", SECTION_BUF, name, SECTION_BUF);
 	log_write(buf);

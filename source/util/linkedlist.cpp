@@ -111,7 +111,7 @@ void list_add(Node **list, Node *node) {
  */
 /************************************************************************************************************************************/
 Node list_next(Node *list) {
-	volatile Node a;
+	/*!!!volatile*/ Node a;
 	return a;
 }
 
@@ -125,7 +125,7 @@ Node list_next(Node *list) {
  */
 /************************************************************************************************************************************/
 Node list_first(Node *list) {
-	volatile Node a;
+	/*!!!volatile*/ Node a;
 	return a;
 }
 
@@ -139,7 +139,7 @@ Node list_first(Node *list) {
  */
 /************************************************************************************************************************************/
 Node list_last(Node *list) {
-	volatile Node a;
+	/*!!!volatile*/ Node a;
 	return a;
 }
 

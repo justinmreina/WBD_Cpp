@@ -81,9 +81,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/doc/stdcomments.h</locationURI>
 		</link>
 		<link>
-			<name>test/test_wbd.c</name>
+			<name>test/test_wbd.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/test/test_wbd.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/test/test_wbd.cpp</locationURI>
 		</link>
 		<link>
 			<name>test/test_wbd.h</name>
@@ -91,9 +91,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/source/test/test_wbd.h</locationURI>
 		</link>
 		<link>
-			<name>util/linkedlist.c</name>
+			<name>util/linkedlist.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/util/linkedlist.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/util/linkedlist.cpp</locationURI>
 		</link>
 		<link>
 			<name>util/linkedlist.h</name>
@@ -101,9 +101,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/source/util/linkedlist.h</locationURI>
 		</link>
 		<link>
-			<name>util/log.c</name>
+			<name>util/log.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/util/log.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/util/log.cpp</locationURI>
 		</link>
 		<link>
 			<name>util/log.h</name>
@@ -116,9 +116,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/source/util/node.h</locationURI>
 		</link>
 		<link>
-			<name>util/time.c</name>
+			<name>util/time.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/util/time.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/util/time.cpp</locationURI>
 		</link>
 		<link>
 			<name>util/time.h</name>
@@ -126,9 +126,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/source/util/time.h</locationURI>
 		</link>
 		<link>
-			<name>util/util.c</name>
+			<name>util/util.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/util/util.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/util/util.cpp</locationURI>
 		</link>
 		<link>
 			<name>util/util.h</name>
@@ -136,9 +136,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/source/util/util.h</locationURI>
 		</link>
 		<link>
-			<name>util/wbd.c</name>
+			<name>util/wbd.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/source/util/wbd.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/source/util/wbd.cpp</locationURI>
 		</link>
 		<link>
 			<name>util/wbd.h</name>

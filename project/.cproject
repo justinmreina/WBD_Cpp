@@ -41,7 +41,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="test|util" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="test"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="util"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
