@@ -26,14 +26,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>WBD_Cpp.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/WBD_Cpp.cpp</locationURI>
-		</link>
-		<link>
 			<name>globals.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/globals.h</locationURI>
+		</link>
+		<link>
+			<name>main.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/main.cpp</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

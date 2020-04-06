@@ -1,22 +1,5 @@
-//============================================================================
-// Name        : WBD_Cpp.cpp
-// Author      : Jmr
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
-//#include <iostream>
-//using namespace std;
-
-//int main() {
-//	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-//	return 0;
-//}
-
-//..................................................................................................................................//
 /************************************************************************************************************************************/
-/** @file		main.c
+/** @file		main.cpp
  * 	@brief		WorkByDay directory application
  * 	@details	maintain active day directory contents
  *
