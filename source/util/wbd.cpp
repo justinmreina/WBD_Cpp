@@ -120,7 +120,7 @@ void wbdPath_setupTest(char *dir) {
 	bool match;																/* strings match										*/
 
 	//Check
-	match = (strcmp(dir, TEST_DIR) == 0);
+	match = (strcmp(dir, util_getTestDir()) == 0);
 
 	//Print to log(dev)
 	util_printDirName(dir);

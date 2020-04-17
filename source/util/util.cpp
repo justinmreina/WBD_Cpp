@@ -69,3 +69,60 @@ int util_getFileSize(FILE *file) {
 	return size;
 }
 
+
+/************************************************************************************************************************************/
+/**	@fcn		bool util_isWorkPC(void)
+ *  @brief		check if filesystem form matches the work pc
+ *  @details	used as binary switch between home/work at this time (Home: "C:\Documents\" & Work: "D:\Documents\")
+ *
+ *  @return		(bool) is work pc?
+ */
+/************************************************************************************************************************************/
+bool util_isWorkPC(void) {
+
+	//Locals
+	DIR *dir;																/* directory path for inspection						*/
+	bool isWorkPC;															/* was found as work pc path?							*/
+
+	//Try to open path
+	dir = opendir("D:\\Documents");
+
+	//Was found?
+	isWorkPC = (dir != NULL);
+
+	return isWorkPC;
+}
+
+
+/************************************************************************************************************************************/
+/**	@fcn		char * util_getTestDir(void)
+ *  @brief		find which directory to perform the WBD test on
+ *  @details	x
+ *
+ *  @return		(char *) directory to perform the test
+ *
+ *  @section 	Opens
+ *  	Confirm operation on WorkPC (not tested)
+ */
+/************************************************************************************************************************************/
+char * util_getTestDir(void) {
+
+	//Locals
+	bool isWorkPC;
+	bool isDemo;
+
+	//Get Config
+#ifdef USES_DEMO_DIR														/* simple preprocessor selection						*/
+	isDemo = true;
+#else
+	isDemo = false;
+#endif
+	isWorkPC = util_isWorkPC();												/* check which form of filesystem in use				*/
+
+	//Load (cleaner presentation for source here)
+	if( isWorkPC *  isDemo) { return WORK_DEMO_PATH; }
+	if( isWorkPC * !isDemo) { return WORK_TEST_PATH; }
+	if(!isWorkPC *  isDemo) { return HOME_DEMO_PATH; }
+	/*(!isWorkPC * !isDemo)*/ return HOME_TEST_PATH;
+}
+

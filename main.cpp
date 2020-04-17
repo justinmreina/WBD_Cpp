@@ -16,6 +16,7 @@
  *		• Uncomment out source for cpp conversion
  *		• re-integrate '!!!' content
  *		• correct compile warnings
+ *		• get debug session working again
  *		//..
  *		• convert to c++ (for extended routines)
  *		• void wbd_storeSearchLen()
@@ -75,8 +76,6 @@ int main(void) {
 
 	//Init
 	sys_init();
-
-	cout << "Hello World!!" << endl; 										/* prints !!!Hello World!!!								*/
 
 	//******************************************************************************************************************************//
 	//															SEARCH																//

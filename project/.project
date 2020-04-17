@@ -31,11 +31,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/globals.h</locationURI>
 		</link>
 		<link>
-			<name>globals2.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/globals2.h</locationURI>
-		</link>
-		<link>
 			<name>main.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/main.cpp</locationURI>
