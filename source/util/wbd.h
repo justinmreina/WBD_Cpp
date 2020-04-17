@@ -3,7 +3,7 @@
 
 
 //Project Includes
-#include "C:\Documents\MyWorkspaces\Eclipse\CDT\WBD_Cpp\globals.h"
+#include "globals.h"
 #include "util.h"
 #include "node.h"
 

@@ -5,7 +5,7 @@
 #include <string.h>
 
 //Project Includes
-#include "C:\Documents\MyWorkspaces\Eclipse\CDT\WBD_Cpp\globals.h"
+#include "globals.h"
 #include "node.h"
 #include "wbd.h"
 
