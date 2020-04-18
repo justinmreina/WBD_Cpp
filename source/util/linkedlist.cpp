@@ -89,7 +89,7 @@ void list_reset(Node **list) {
 void list_add(Node **list, Node *node) {
 
 	//Store Refs
-	(*list)->next = node;															/* original points forward to new						*/
+	(*list)->next = node;													/* original points forward to new						*/
 	node->prev = *list;														/* new points back to original							*/
 
 	//node is tail
@@ -111,7 +111,7 @@ void list_add(Node **list, Node *node) {
  */
 /************************************************************************************************************************************/
 Node list_next(Node *list) {
-	/*!!!volatile*/ Node a;
+	Node a;
 	return a;
 }
 
@@ -125,7 +125,7 @@ Node list_next(Node *list) {
  */
 /************************************************************************************************************************************/
 Node list_first(Node *list) {
-	/*!!!volatile*/ Node a;
+	Node a;
 	return a;
 }
 
@@ -139,7 +139,7 @@ Node list_first(Node *list) {
  */
 /************************************************************************************************************************************/
 Node list_last(Node *list) {
-	/*!!!volatile*/ Node a;
+	Node a;
 	return a;
 }
 

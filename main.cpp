@@ -56,6 +56,7 @@ char const *strFour = "StringFour";
 
 //Local Routines
 void sys_init(void);
+void sys_close(void);
 
 //Temp Locals
 long timeVals[3];															/* dates found for time measurement						*/
@@ -86,91 +87,88 @@ int main(void) {
 
 	//Find all WBD in target
 	log_insertSection((char *)"WBD DIR CHECK");
-//	wbdPath_getAllWbdDirs(searchDirs, rootDir);								/* store wbd directories found							*/
+	wbdPath_getAllWbdDirs(searchDirs, rootDir);								/* store wbd directories found							*/
 
 	//Update Dir Counts
-//	wbd_storeSearchLen(searchDirs);											/* @note 	this might not be needed					*/
-
+	wbd_storeSearchLen(searchDirs);											/* @note 	this might not be needed					*/
 
 	//******************************************************************************************************************************//
 	//														   CLEAN EMPTIES														//
 	//******************************************************************************************************************************//
 
 	//Grab Start Time
-//	timeVals[1] = time_getClockMs();
+	timeVals[1] = time_getClockMs();
+
+	int searchDirs_count = list_getLength(searchDirs);
 
 	//Clean
-//	for(String dir : searchDirs) {
-////		WBDPath.cleanEmpties(new File(dir));							/* For each WBD, check for empties at root				*/
-//	}
-
+	for(int i=0; i<searchDirs_count; i++) {
+		//cleanEmpties(searchDirs(i)										/* For each WBD, check for empties at root				*/
+	}
 
 	//******************************************************************************************************************************//
 	//														    ADD TODAY														  	//
 	//******************************************************************************************************************************//
 
 	//Add today
-//	for(String dir : searchDirs) {
-//		WBDPath.addToday(new File(dir)); 									/* add today if not found								*/
-//	}
+	for(int i=0; i<searchDirs_count; i++) {
+		//addToday(searchDirs(i)											/* add today if not found								*/
+	}
 
-	struct node *currNode = searchDirs;
+	log_insertSection((char *)"NODES");
 
-//	log_insertSection("NODES");
+	Node *curr2Node = firstNode;
 
-//	Node *curr2Node = firstNode;
-
-//	for(int i=0; i<3; i++) {
+	for(int i=0; i<3; i++) {
 
 		//Locals
-//		char resp_str[50];
+		char resp_str[50];
 
 		//Init
-//		memset(resp_str, '\0', sizeof(resp_str));
+		memset(resp_str, '\0', sizeof(resp_str));
 
 		//make
-//		char *name = curr2Node->name;
-//		sprintf(resp_str, "Hello %i: %s", (int)&curr2Node, name);
+		char *name = curr2Node->name;
+		sprintf(resp_str, "Hello %i: %s", (int)&curr2Node, name);
 
 		//print
-//		log_info(resp_str);
+		log_info(resp_str);
 
 		//Update search
-//		if(curr2Node->next!=NOT_AN_ADDRESS) {
+		if(curr2Node->next!=NOT_AN_ADDRESS) {
 
-//			sprintf(resp_str, "next is: %d", (int)&curr2Node->next);
+			sprintf(resp_str, "next is: %d", (int)&curr2Node->next);
 
-//			log_info(resp_str);
+			log_info(resp_str);
 
-//			list_increment(&curr2Node);
-//		} else {
-//			log_info("next is 0x0000 and passing");
-//		}
-//	}
+			list_increment(&curr2Node);
+		} else {
+			log_info((char *)"next is 0x0000 and passing");
+		}
+	}
 
 
 	//**************************************************************************************************************************//
 	//															 END															//
 	//**************************************************************************************************************************//
 
-//	delay_s(3);
+	delay_s(3);
 
 	//Find elapsed time
-//	timeVals[2] = time_getClockMs();
+	timeVals[2] = time_getClockMs();
 
 	//Calc
-//	long delta_ms = timeVals[2] - timeVals[1];
-//	float time_s = (((float)delta_ms )/1000);
+	long delta_ms = timeVals[2] - timeVals[1];
+	float time_s = (((float)delta_ms )/1000);
 
 	//Exit Message
-//    char buffer[50];
-//    int WBDPath_wbdcount = 2, WBDPath_count = 100;
-//    sprintf(buffer, "WBDUpate complete(%d/%d).  Elapsed time: %fs", WBDPath_wbdcount, WBDPath_count, time_s);
-//    log_info(buffer);
+    char buffer[50];
+    int WBDPath_wbdcount = 2, WBDPath_count = 100;
+    sprintf(buffer, "WBDUpate complete(%d/%d).  Elapsed time: %.2fs", WBDPath_wbdcount, WBDPath_count, time_s);
+    log_info(buffer);
 
-	log_close();
-	//sys_close()...
-	 free(rootDir);
+	//Exit
+	sys_close();
 
 	return EXIT_SUCCESS;
 }
@@ -192,7 +190,7 @@ void sys_init(void) {
 
 	//Init Variables
 	memset(&timeVals, 0, sizeof(timeVals));									/* clear time vals										*/
-	rootDir = (char *)malloc(sizeof(util_getTestDir())+100);				/* grab space for string								*/
+	rootDir = (char *)malloc(strlen(util_getTestDir()));					/* grab space for string								*/
 	strcpy(rootDir, util_getTestDir());										/* App: SEARCH_DIR, Dev: TEST_DIR						*/
 
 	//Load Dev LinkedList
@@ -216,6 +214,30 @@ void sys_init(void) {
 
 	//<temp> Setup searchDirs
 	searchDirs = firstNode;
+
+	return;
+}
+
+
+/************************************************************************************************************************************/
+/**	@fcn		void sys_closet(void)
+ *  @brief		end operations
+ *  @details	x
+ *
+ *	@pre	system is running
+ *	@post	system is ready to complete
+ *
+ *  @section 	Opens
+ *  	none listed
+ */
+/************************************************************************************************************************************/
+void sys_close(void) {
+
+	//Release mem
+	free(rootDir);
+
+	//Close log
+	log_close();
 
 	return;
 }

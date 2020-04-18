@@ -163,7 +163,16 @@ void wbd_storeSearchLen(struct node *list) {
 }
 
 
-//@todo 	header
+/************************************************************************************************************************************/
+/**	@fcn		FILE * wbdPath_getSubDirs(FILE *dir)
+ *  @brief		x
+ *  @details	x
+ *
+ *  @param		[in]	(FILE *) dir - x
+ *
+ *  @return 	(FILE *) x
+ */
+/************************************************************************************************************************************/
 FILE * wbdPath_getSubDirs(FILE *dir) {
 
 	FILE *file = dir;

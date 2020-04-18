@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <sys/types.h>
 
 //Definitions
 #define Time struct tm														/* cleaner name for use									*/

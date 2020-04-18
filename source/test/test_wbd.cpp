@@ -30,21 +30,22 @@
 /************************************************************************************************************************************/
 bool test_wbd_storeSearchLen(void) {
 
-//	struct node theList[5];
-//
-//	struct node abc;
-//
-//	abc.name = "justin";
-//	abc.next = abc;
-//	abc.prev = abc;
-//	abc.data = abc.name;
-//
-//
-//	theList[0] = abc;
+	//Locals
+	struct node theList[5];
+	struct node abc;
 
-//	theList[1] = {.data = abc.name, .name = abc.name, .prev = abc, .next = abc};
+	//Load
+	abc.name = (char *)"justin";
+	abc.next = (Node *) &abc;
+	abc.prev = (Node *) &abc;
+	abc.data = abc.name;
 
-//	wbd_storeSearchLen(theList);
+
+	//Store
+	theList[0] = abc;
+	theList[1] = {.data = abc.name, .name = abc.name, .prev = &abc, .next = &abc};
+
+	wbd_storeSearchLen(theList);
 
 	return true;
 }
