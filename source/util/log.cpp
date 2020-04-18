@@ -227,7 +227,7 @@ void log_insertSection(char *name) {
 	len = 3 + 2 + strlen(SECTION_BUF) + strlen(name) + strlen(SECTION_BUF) + 2;
 	buf = (char *)malloc(len);
 
-	sprintf(buf, "\n\n//%s %s %s\n", SECTION_BUF, name, SECTION_BUF);
+	sprintf(buf, "\n\n//%s %s %s//\n", SECTION_BUF, name, SECTION_BUF);
 	log_write(buf);
 
 	return;
