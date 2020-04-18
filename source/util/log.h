@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <dirent.h>
 #include <errno.h>
+#include <time.h>
 
 //Project Includes
 #include "time.h"

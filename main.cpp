@@ -17,6 +17,7 @@
  *		• re-integrate '!!!' content
  *		• correct compile warnings
  *		• get debug session working again
+ *		• Debug steps work again
  *		//..
  *		• convert to c++ (for extended routines)
  *		• void wbd_storeSearchLen()
@@ -34,6 +35,7 @@
  *  	• Extend application to all "ByDay" variants
  *  	• Confirm safe use of char* with/without EOS
  * 		• Inject empty dirs on test boot
+ * 		• Remove warning: "Invalid project path: Include path not found (source)"
  *
  * 	@section	Legal Disclaimer
  * 			2020© Year Justin Reina, All rights reserved. All contents of this source file and/or any other related source
@@ -80,7 +82,7 @@ int main(void) {
 	//******************************************************************************************************************************//
 	//															SEARCH																//
 	//******************************************************************************************************************************//
-	log_info("Beginning search query for WorkByDay -");
+	log_info((char *)"Beginning search query for WorkByDay -");
 
 //	//Find all WBD in target
 //	log_insertSection("WBD DIR CHECK");
@@ -165,10 +167,10 @@ int main(void) {
 //    int WBDPath_wbdcount = 2, WBDPath_count = 100;
 //    sprintf(buffer, "WBDUpate complete(%d/%d).  Elapsed time: %fs", WBDPath_wbdcount, WBDPath_count, time_s);
 //    log_info(buffer);
-//
-//	log_close();
-//
-//	return EXIT_SUCCESS;
+
+	log_close();
+
+	return EXIT_SUCCESS;
 }
 
 
@@ -201,10 +203,10 @@ void sys_init(void) {
 //	firstNode->next  = secondNode;
 //	secondNode->next = thirdNode;
 //	thirdNode->next = fourthNode;
-//
-//	//wbd_directories = new ArrayList<>();
-//	log_init();
-//
+
+	//wbd_directories = new ArrayList<>();
+	log_init();
+
 //	//Grab Start Time
 //	timeVals[0] = time_getClockMs();
 //

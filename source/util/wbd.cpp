@@ -127,7 +127,7 @@ void wbdPath_setupTest(char *dir) {
 
 	//Abort if not matching
 	if(!match) {
-		log_info("directory input was not found, aborting.");
+		log_info((char *)"directory input was not found, aborting.");
 		abort();															/* only setup for test on TEST_DIR case					*/
 	}
 

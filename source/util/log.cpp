@@ -18,7 +18,6 @@
 
 //Globals
 FILE *logFile;
-//!!!time_t timer;
 
 
 /************************************************************************************************************************************/
@@ -58,11 +57,10 @@ void log_init(void) {
 
 	//Init
 	logFile = fopen(LOGFILENAME, "a+");										/* create log file										*/
-//!!!	timer = time(NULL);
 
 	//Load Log
 	log_insertHeader();
-	log_info("Log file was created");
+	log_info((char *)"Log file was created");
 
 	//Safety
 	if(logFile==NULL) {
@@ -122,15 +120,30 @@ void log_close(void) {
 void log_info(char *str) {
 
 	//Locals
-    struct tm* tm_info;
+	time_t rawtime;
+	int hr, min, sec;
+	bool isPm;
+	struct tm *tm_info;
 	char buf2[200];
+	char *mer;
 
-	//Timestamp
- //!!!   tm_info = localtime(&timer);
+	//Grab time
+	time(&rawtime);
+	tm_info = localtime(&rawtime);
+	hr = (tm_info->tm_hour);
+	min = tm_info->tm_min;
+	sec = (tm_info->tm_sec);
 
-	//Gen
-//!!!    tm_info = localtime(&timer);
-    sprintf(buf2, "(%02d:%02d:%d) %s", (tm_info->tm_hour), tm_info->tm_min, (tm_info->tm_sec), str);
+	//Parse time values
+	isPm = (hr > 11);
+	if(hr > 12) {
+		hr -= 12;
+	}
+
+	mer = (isPm) ? (char *)"PM":(char *)"AM";
+
+    //Load Date Line
+    sprintf(&buf2[0], "%02d:%02d:%02d %s: %s", hr, min, sec, mer, str);
 
 	//Print
 	log_write(buf2);
@@ -156,13 +169,15 @@ void log_info(char *str) {
 void log_insertHeader(void) {
 
 	//Locals
-    struct tm* tm_info;
+	time_t rawtime;
+	struct tm *tm_info;
+    int m, d, y;
 	char buf2[26];
-	char *lines[4] = {
-			"WorkByDay Activity Record",
-			"Version: 1.0",
-			"Author: Justin Reina",
-			"Published: "};   												/* March 21st, 2020\n\n",								*/
+	const char *lines[4] = {
+							"WorkByDay Activity Record",
+							"Version: 1.0",
+							"Author: Justin Reina",
+							"Published: "};
 
 	//empty file?
 	if(util_getFileSize(logFile)!=0) {
@@ -170,19 +185,20 @@ void log_insertHeader(void) {
 	}
 
 	for(int i=0; i<3; i++) {
-		log_write(lines[i]);
+		log_write((char *)lines[i]);
 	}
 
-//[4]?!!!
-	fprintf(logFile, lines[3]);												/* to log file											*/
-	puts(lines[3]);															/* put to console										*/
+	//Grab time
+	time(&rawtime);
+	tm_info = localtime(&rawtime);
+    m = (tm_info->tm_mon+1);
+    d = tm_info->tm_mday;
+    y = (1900+tm_info->tm_year);
 
-
-	//Add date & EOS
-//!!!    tm_info = localtime(&timer);
-//@todo 	is &[0] needed?
-    sprintf(&buf2[0], "%02d/%02d/%d\n", (tm_info->tm_mon+1), tm_info->tm_mday, (1900+tm_info->tm_year));
-    log_write(buf2);
+    //Load Date Line
+    sprintf(&buf2[0], "%s: %02d/%02d/%d\n", lines[3], m, d, y);				/* load last line										*/
+	fprintf(logFile, buf2);													/* to log file											*/
+	puts(buf2);																/* put to console										*/
 
 	return;
 }
@@ -209,7 +225,7 @@ void log_insertSection(char *name) {
 
 	//Init
 	len = 3 + 2 + strlen(SECTION_BUF) + strlen(name) + strlen(SECTION_BUF) + 2;
-//!!!	buf = malloc(len);
+	buf = (char *)malloc(len);
 
 	sprintf(buf, "\n\n//%s %s %s\n", SECTION_BUF, name, SECTION_BUF);
 	log_write(buf);

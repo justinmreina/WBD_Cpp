@@ -56,11 +56,6 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>out/WBD_App.exe</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/out/WBD_App.exe</locationURI>
-		</link>
-		<link>
 			<name>ref/Log.java</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/doc/prev/Log.java</locationURI>

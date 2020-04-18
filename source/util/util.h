@@ -15,10 +15,10 @@ extern int util_getFileSize(FILE *file);
 extern char * util_getTestDir(void);
 
 //Definitions
-#define WORK_DEMO_PATH ("D:\\Documents\\MyWorkspaces\\Eclipse\\CDT\\WBD_Cpp\\data\\TestDirs")
-#define WORK_TEST_PATH ("D:\\")
-#define HOME_DEMO_PATH ("C:\\Documents\\MyWorkspaces\\Eclipse\\CDT\\WBD_Cpp\\data\\TestDirs")
-#define HOME_TEST_PATH ("C:\\")
+#define WORK_DEMO_PATH ((char *)"D:\\Documents\\MyWorkspaces\\Eclipse\\CDT\\WBD_Cpp\\data\\TestDirs")
+#define WORK_TEST_PATH ((char *)"D:\\")
+#define HOME_DEMO_PATH ((char *)"C:\\Documents\\MyWorkspaces\\Eclipse\\CDT\\WBD_Cpp\\data\\TestDirs")
+#define HOME_TEST_PATH ((char *)"C:\\")
 
 #endif /* UTIL_H_ */
 
